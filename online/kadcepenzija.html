@@ -174,9 +174,17 @@
     new WOW().init();
   </script>
   <script>
-  $.getJSON('https://crossorigin.me/https://kadcepenzija.glitch.me/api/nasalteru', function(data) {
+$.getJSON('https://cors-anywhere.herokuapp.com/https://kadcepenzija.glitch.me/api/nasalteru', function(data) {
       var poruka = data.poruka;
-     $(".nasalteru").append(poruka)
+     $(".nasalteru").append("Penzije na šalteru: " + poruka)
+});
+$.getJSON('https://cors-anywhere.herokuapp.com/https://kadcepenzija.glitch.me/api/tekuciracuni', function(data) {
+      var poruka = data.poruka;
+     $(".tekuciracuni").append("Penzije na tekućim računima: " + poruka)
+});
+$.getJSON('https://cors-anywhere.herokuapp.com/https://kadcepenzija.glitch.me/api/nakucnuadresu', function(data) {
+      var poruka = data.poruka;
+     $(".nakucnuadresu").append("Penzije na kućnoj adresi: " + poruka)
 });
   </script>
 </body>
